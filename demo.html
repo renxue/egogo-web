@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade Out on Hover</title>
+    <style>
+      .container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+      }
+
+      .main-content,
+      .hidden-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.5s;
+      }
+
+      .hidden-content {
+        opacity: 0;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-content">
+        <h1>这是主要内容</h1>
+      </div>
+      <div class="hidden-content">
+        <h2>这是隐藏内容</h2>
+      </div>
+    </div>
+  </body>
+  <script>
+    const container = document.querySelector(".container");
+    const mainContent = document.querySelector(".main-content");
+    const hiddenContent = document.querySelector(".hidden-content");
+
+    container.addEventListener("mouseenter", () => {
+      hiddenContent.style.display = "block";
+      setTimeout(() => {
+        hiddenContent.style.opacity = "1";
+        mainContent.style.opacity = "0";
+      }, 10);
+    });
+
+    container.addEventListener("mouseleave", () => {
+      hiddenContent.style.opacity = "0";
+      mainContent.style.opacity = "1";
+      setTimeout(() => {
+        hiddenContent.style.display = "none";
+      }, 500);
+    });
+  </script>
+</html>

@@ -1,0 +1,71 @@
+:root {
+  --text-color: #fff;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.navbar-toggler {
+  background-color: var(--text-color);
+}
+.navbar-light .navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding-top: 0px;
+  color: var(--text-color);
+  font-family: "poppins-medium", sans-serif;
+}
+.navbar .navbar-collapse .active {
+  background-color: #edb64a;
+}
+@media screen and (min-width: 996px) {
+  nav .category {
+    margin: 0px auto;
+    gap: 30px;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.product-window {
+  display: none;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 65px;
+  z-index: 10;
+}
+#about,
+#contact {
+  font-size: 1rem;
+}
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 996px) {
+  .navbar-light .navbar-nav .nav-link {
+    color: #000000;
+  }
+  .phone {
+    display: none;
+  }
+}
+.footer ul {
+  margin-top: 15px;
+}
+.copyrite {
+  font-family: "poppins-medium";
+}

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "open_sans";
+  src: url("fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  /* 添加其他字体文件和样式（粗体、斜体等） */
+}
+@font-face {
+  font-family: "poppins-medium";
+  src: url("fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  /* 添加其他字体文件和样式（粗体、斜体等） */
+}
+body {
+  font-family: "open_sans", sans-serif;
+}

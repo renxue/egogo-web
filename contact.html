@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Egogo</title>
+    <link
+      rel="icon"
+      href="/img/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <!-- 导航栏 start -->
+    <nav class="navbar navbar-expand-lg navbar-light" value="0">
+      <a class="navbar-brand" href="/">
+        <img src="/img/logo.png" width="150" class="img-fluid" alt="" />
+      </a>
+      <button
+        class="navbar-toggler btn-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto category">
+          <li class="nav-item">
+            <a class="nav-link" href="/panda">Panda </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/duck">Duck</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/rabbit">Rabbit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sheep">Sheep</a>
+          </li>
+        </ul>
+        <div class="my-2 my-lg-0">
+          <ul class="navbar-nav about-contact">
+            <li class="nav-item">
+              <a class="nav-link" id="about" href="/about">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" id="contact" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 导航栏 end -->
+    <div class="container-fluid d-flex flex-column align-items-center main">
+      <div class="row message">
+        <div class="col-lg-5 col-md-12 contact-info">
+          <div class="mt-5">
+            <p class="text-white">
+              <i
+                class="fa-regular fa-envelope fa-lg"
+                style="color: #ffffff"
+              ></i>
+              : happyhao@sztimeshow.com
+            </p>
+          </div>
+          <div class="mt-5">
+            <p class="text-white">
+              <i
+                class="fa-solid fa-mobile-screen-button fa-lg"
+                style="color: #ffffff"
+              ></i>
+              : +86 181-4858-6209
+            </p>
+          </div>
+          <!--<div class="mt-5">
+            <p class="text-white">
+              <i class="fa-brands fa-whatsapp fa-lg" style="color: #ffffff"></i>
+              : +86 150-9206-5665
+            </p>
+          </div>
+          <div class="mt-5">
+            <p class="text-white">
+              <i class="fa-brands fa-weixin fa-lg" style="color: #ffffff"></i>
+              : FCC910
+            </p>
+          </div>-->
+          <div class="mt-5">
+            <p class="text-white">
+              <i
+                class="fa-solid fa-regular fa-location-dot fa-lg"
+                style="color: #ffffff"
+              ></i>
+              : No. 108 Donghuan 1st Road,Longhua New Dist., Shenzhen China
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12">
+          <form id="inquiry-form">
+            <input type="hidden" name="productName" value="Night Light" />
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group">
+                    <label for="name" class="col-form-label text-white"
+                      >Name:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      id="name"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group">
+                    <label for="email" class="col-form-label text-white"
+                      >Email:</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group">
+                    <label for="phone" class="col-form-label text-white"
+                      >Phone:</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="phone"
+                      id="phone"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group">
+                    <label for="company" class="col-form-label text-white"
+                      >Company:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="company"
+                      id="company"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="col-form-label text-white"
+                  >Message:</label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="7"
+                ></textarea>
+              </div>
+              <button
+                type="button"
+                class="btn btn-lg btn-block mb-3 submit-message"
+                onclick="send()"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid footer d-flex flex-column align-items-center justify-content-center"
+    >
+      <ul class="list-unstyled d-flex">
+        <li class="text-white copyrite">EGOGO © 2023</li>
+        <li>
+          <a class="text-white ml-5" href="#">News</a>
+        </li>
+        <li>
+          <a class="text-white ml-5" href="#"
+            ><i class="fa-brands fa-linkedin" style="color: #ffffff"></i
+          ></a>
+        </li>
+        <li>
+          <a class="text-white ml-3" href="#"
+            ><i class="fa-brands fa-facebook" style="color: #ffffff"></i
+          ></a>
+        </li>
+        <li>
+          <a class="text-white ml-3" href="#"
+            ><i class="fa-brands fa-youtube" style="color: #ffffff"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <!-- 产品详情 end -->
+    <!-- 发送消息动画 -->
+    <img
+      class="success-message"
+      src="/img/email.png"
+      width="100"
+      alt="飞过的图片"
+      id="message-ok"
+    />
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/nav.js"></script>
+  </body>
+</html>

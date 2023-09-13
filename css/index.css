@@ -1,0 +1,12 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  color: #000;
+  width: 100%;
+}
+.footer p {
+  margin-bottom: 0px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  font-weight: 800;
+}

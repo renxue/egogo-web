@@ -1,0 +1,37 @@
+body {
+  background-image: url(/img/contact/conatct-bg.png);
+  background-size: 100%;
+}
+.navbar {
+  background-color: #000;
+}
+.main {
+  margin-top: 6%;
+}
+p {
+  color: #fff;
+}
+.message {
+  background-color: rgba(104, 104, 104, 0.95);
+  padding: 20px 30px;
+}
+.submit-message {
+  background-color: #f5f5f5;
+}
+.footer {
+  font-size: 0.8rem;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin-top: 3%;
+}
+.footer p {
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 996px) {
+  .contact-info {
+    margin-bottom: 50px;
+  }
+  .message {
+    background-color: rgba(104, 104, 104, 0.8);
+  }
+}

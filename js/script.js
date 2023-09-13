@@ -39,20 +39,24 @@
 //   });
 // });
 // 当页面滚动时显示/隐藏回到顶部按钮
+$(function () {
+  $("#nav").load("header.html", function () {});
+  $.getScript("/js/nav.js", function () {});
+});
 const scrollToTopBtn = document.querySelector(".scroll-to-top");
 const inquiryBtn = document.querySelector(".inquiry-btn");
 window.addEventListener("scroll", () => {
   var screenWidth = $(window).width();
   var val = $("nav").attr("value");
   if (window.scrollY > 80) {
-    if(screenWidth >= 992) {
-      $("nav").css({"background-color": "black"});
-    } else  {
-      $("nav").css({"background-color": "white"});
+    if (screenWidth >= 992) {
+      $("nav").css({ "background-color": "black" });
+    } else {
+      $("nav").css({ "background-color": "white" });
       $(".navbar-brand img").attr("src", "/img/logo-black.png");
     }
   } else {
-    if(val == 0) {
+    if (val == 0) {
       $("nav").css("background-color", "");
       $(".navbar-brand img").attr("src", "/img/logo.png");
     }

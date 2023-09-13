@@ -62,7 +62,7 @@ window.addEventListener("scroll", () => {
     });
   } else {
     if (val == 0) {
-      $("nav").css({"background-color": "", "box-shadow": ""});
+      $("nav").css({ "background-color": "", "box-shadow": "" });
     }
   }
 

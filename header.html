@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" value="0">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id=" pc" value="0">
   <a class="navbar-brand" href="/">
-    <img src="/img/logo.png" width="150" class="img-fluid" alt="" value="0" />
+    <img src="/img/logo.png" width="100" class="img-fluid" alt="" value="0" />
   </a>
   <button
     class="navbar-toggler btn-light"
@@ -45,6 +45,63 @@
   </div>
 </nav>
 <div class="container-fluid product-window">
+  <div class="container">
+    <div class="row" id="nav-product"></div>
+  </div>
+</div>
+
+<!-- 移动端 -->
+<nav
+  class="navbar navbar-expand-lg navbar-light fixed-top"
+  id="mobile"
+  value="0"
+>
+  <a class="navbar-brand" href="/">
+    <img src="/img/logo.png" width="100" class="img-fluid" alt="" value="0" />
+  </a>
+  <button
+    class="navbar-toggler btn-light"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto category">
+      <li class="nav-item">
+        <a class="nav-link">Night Light</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Projection Light</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Aroma Diffuser</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Hand Warmer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Other</a>
+      </li>
+    </ul>
+    <div class="my-2 my-lg-0">
+      <ul class="navbar-nav about-contact">
+        <li class="nav-item">
+          <a class="nav-link" id="about" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid mobile-product-window">
   <div class="container">
     <div class="row" id="nav-product"></div>
   </div>

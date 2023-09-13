@@ -20,53 +20,66 @@
   </head>
   <body>
     <!-- 导航栏 start -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" value="0">
-      <a class="navbar-brand" href="/">
-        <img src="/img/logo-black.png" width="150" class="img-fluid" alt="" />
-      </a>
-      <button
-        class="navbar-toggler btn-light"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div id="nav">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" value="0">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/img/logo-black.png"
+            width="150"
+            class="img-fluid"
+            alt=""
+            value="0"
+          />
+        </a>
+        <button
+          class="navbar-toggler btn-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto category">
-          <li class="nav-item">
-            <a class="nav-link" href="/panda"
-              >Panda <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/duck">Duck</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/rabbit">Rabbit</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/sheep">Sheep</a>
-          </li>
-        </ul>
-        <div class="my-2 my-lg-0">
-          <ul class="navbar-nav about-contact">
-            <li class="nav-item active">
-              <a class="nav-link" id="about" href="#"
-                >About <span class="sr-only"></span
-              ></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto category">
+            <li class="nav-item">
+              <a class="nav-link">Night Light</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="contact" href="/contact">Contact</a>
+              <a class="nav-link">Projection Light</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Aroma Diffuser</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Hand Warmer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Other</a>
             </li>
           </ul>
+          <div class="my-2 my-lg-0">
+            <ul class="navbar-nav about-contact">
+              <li class="nav-item">
+                <a class="nav-link" id="about" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid product-window">
+        <div class="container">
+          <div class="row" id="nav-product"></div>
         </div>
       </div>
-    </nav>
+    </div>
+
     <!-- 导航栏 end -->
     <div class="container-fluid">
       <div class="container company-info">
@@ -195,10 +208,10 @@
               class="col-lg-5 col-md-12 d-flex flex-column justify-content-center"
             >
               <p>
-                Embark on a journey of excellence with Egogo with an
-                unwavering commitment to innovation, expertise, and industry
-                leadership, we stand as a force to be reckoned with in the world
-                of night light.
+                Embark on a journey of excellence with Egogo with an unwavering
+                commitment to innovation, expertise, and industry leadership, we
+                stand as a force to be reckoned with in the world of night
+                light.
               </p>
             </div>
           </div>
@@ -256,7 +269,8 @@
       <i class="fa-solid fa-arrow-up"></i>
     </div>
   </body>
-  <script src="js/about.js"></script>
+  <script src="/js/about.js"></script>
+  <script src="/js/nav.js"></script>
   <!-- 图标 -->
-  <script src="js/fontawesome.js"></script>
+  <script src="/js/fontawesome.js"></script>
 </html>

@@ -1,11 +1,8 @@
-$(function () {
-  $(".nav").load("header.html");
-});
 $(document).ready(function () {
   $(".navbar-toggler").on("click", function () {
     var val = $("nav").attr("value");
     if (val == 0) {
-      $("nav").css("background-color", "#fff");
+      $("nav").css({ "background-color": "#fff", height: "100%" });
       $("nav").attr("value", "1");
       $(".navbar-brand img").attr("src", "/img/logo-black.png");
       $(".navbar .nav-item .nav-link").css("color", "#000");
@@ -28,7 +25,7 @@ $(document).ready(function () {
     }
   });
 
-  $(".nav").mouseleave(function (e) {
+  $("#nav").mouseleave(function (e) {
     // 鼠标离开事件
     clearNavProduct();
   });
@@ -98,6 +95,7 @@ function fillHtml(arrs) {
 
 function fillCss(e) {
   $(".navbar .nav-item .nav-link").css("background-color", "");
+
   $(".navbar .nav-item .nav-link").css("color", "#000");
   $(".product-window").css("display", "block");
   $("nav").css("background-color", "#fff");
@@ -109,11 +107,16 @@ function fillCss(e) {
   $(".main").css("filter", "blur(10px)");
 }
 function clearNavProduct() {
+  var path = window.location.pathname;
   $(".product-window").css("display", "none");
-  $("nav").css("background-color", "");
-  $(".navbar-brand img").attr("src", "/img/logo.png");
+  if (path != "/about.html") {
+    $("nav").css("background-color", "");
+    $(".navbar-brand img").attr("src", "/img/logo.png");
+    $(".navbar .nav-item .nav-link").css("color", "#fff");
+  } else {
+    $(".navbar .nav-item .nav-link").css("color", "#000");
+  }
   $(".navbar .nav-item .nav-link").css({
-    color: "#fff",
     "background-color": "",
     "border-radius": "",
   });

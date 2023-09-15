@@ -24,7 +24,16 @@
   color: var(--text-color);
   cursor: pointer;
 }
-
+.navbar button,
+.btn-light:hover,
+.btn-light:active {
+  background-color: #ecb74f;
+}
+.navbar button span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
 #about,
 #contact {
   font-size: 1rem;
@@ -50,6 +59,9 @@ video {
   font-family: "poppins-medium";
 }
 @media screen and (min-width: 996px) {
+  #mobile-menu {
+    display: none;
+  }
   nav .category {
     margin: 0px auto;
     gap: 30px;
@@ -63,7 +75,7 @@ video {
     z-index: 10;
   }
 }
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 992px) {
   .navbar-light .navbar-nav .nav-link {
     color: #000000;
   }
@@ -80,15 +92,39 @@ video {
     z-index: 10;
   }
   .navbar {
-    display: -ms-flexbox;
+    display: none;
+  }
+  #mobile-menu {
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: flex-start;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
-    align-content: flex-start;
+  }
+  #mobile-menu button {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  #mobile-menu img {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  #mobile-product-window {
+    position: fixed;
+    background-color: #fff;
+    z-index: 6;
+    height: 100vh;
+  }
+  #mobile-product-window a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #6a6a6a;
+  }
+  #mobile-product-list {
+    position: fixed;
+    background-color: #fff;
+    z-index: 7;
+    height: 100vh;
   }
 }

@@ -122,3 +122,11 @@ function clearNavProduct() {
   });
   $(".main").css("filter", "");
 }
+// 打开手机导航菜单
+function openMenu() {
+  $("#mobile-product-window").css("display", "block");
+}
+// 关闭手机导航菜单
+function closeMenu() {
+  $("#mobile-product-window").css("display", "none");
+}

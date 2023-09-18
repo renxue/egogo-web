@@ -129,4 +129,11 @@ function openMenu() {
 // 关闭手机导航菜单
 function closeMenu() {
   $("#mobile-product-window").css("display", "none");
+  $("#mobile-product-list").css("display", "none");
 }
+
+$(".mobile-category").on("click", function (e) {
+  console.log(e.target.text);
+  var categoryName = $(e.target).children().first();
+  console.log(categoryName);
+});

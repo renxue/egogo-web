@@ -59,6 +59,9 @@ video {
   font-family: "poppins-medium";
 }
 @media screen and (min-width: 996px) {
+  #mobile {
+    display: none;
+  }
   #mobile-menu {
     display: none;
   }
@@ -76,6 +79,9 @@ video {
   }
 }
 @media screen and (max-width: 992px) {
+  #pc {
+    display: none;
+  }
   .navbar-light .navbar-nav .nav-link {
     color: #000000;
   }
@@ -116,13 +122,19 @@ video {
     z-index: 6;
     height: 100vh;
   }
-  #mobile-product-window a {
-    font-size: 1.3rem;
+  #mobile-product-window ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+  }
+  #mobile-product-window ul li label {
+    font-size: 1.2rem;
     font-weight: 600;
     color: #6a6a6a;
   }
   #mobile-product-list {
     position: fixed;
+    display: none;
     background-color: #fff;
     z-index: 7;
     height: 100vh;

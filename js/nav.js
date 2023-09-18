@@ -20,8 +20,8 @@ $(document).ready(function () {
     if (val == "About" || val == "Contact") {
       clearNavProduct();
     } else {
-      showProduct(val);
-      fillCss(e);
+      showPCProductList(val);
+      fillPCCss(e);
     }
   });
 
@@ -30,52 +30,51 @@ $(document).ready(function () {
     clearNavProduct();
   });
 });
-
-function showProduct(val) {
-  var lamps = [
-    "/img/product/lamp/panda/one.jpg=one",
-    "/img/product/lamp/panda/one.jpg=two",
-    "/img/product/lamp/panda/one.jpg=three",
-    "/img/product/lamp/panda/one.jpg=four",
-  ];
-  var projectors = [
-    "/img/product/projector/projector-01.png=one",
-    "/img/product/projector/projector-01.png=two",
-    "/img/product/projector/projector-01.png=three",
-    "/img/product/projector/projector-01.png=four",
-  ];
-  var aromaDiffusers = [
-    "/img/product/aroma-diffuser/aroma-diffuser-01.png=one",
-    "/img/product/aroma-diffuser/aroma-diffuser-01.png=two",
-    "/img/product/aroma-diffuser/aroma-diffuser-01.png=three",
-    "/img/product/aroma-diffuser/aroma-diffuser-01.png=four",
-  ];
-  var handWarmers = [
-    "/img/product/hand-warmer/hand-warmer-01.png=one",
-    "/img/product/hand-warmer/hand-warmer-01.png=two",
-    "/img/product/hand-warmer/hand-warmer-01.png=three",
-    "/img/product/hand-warmer/hand-warmer-01.png=four",
-  ];
-  var others = [
-    "/img/product/other/eye-mask.png=one",
-    "/img/product/other/eye-mask.png=two",
-    "/img/product/other/eye-mask.png=three",
-    "/img/product/other/eye-mask.png=four",
-  ];
+var lamps = [
+  "/img/product/lamp/panda/one.jpg=one",
+  "/img/product/lamp/panda/one.jpg=two",
+  "/img/product/lamp/panda/one.jpg=three",
+  "/img/product/lamp/panda/one.jpg=four",
+];
+var projectors = [
+  "/img/product/projector/projector-01.png=one",
+  "/img/product/projector/projector-01.png=two",
+  "/img/product/projector/projector-01.png=three",
+  "/img/product/projector/projector-01.png=four",
+];
+var aromaDiffusers = [
+  "/img/product/aroma-diffuser/aroma-diffuser-01.png=one",
+  "/img/product/aroma-diffuser/aroma-diffuser-01.png=two",
+  "/img/product/aroma-diffuser/aroma-diffuser-01.png=three",
+  "/img/product/aroma-diffuser/aroma-diffuser-01.png=four",
+];
+var handWarmers = [
+  "/img/product/hand-warmer/hand-warmer-01.png=one",
+  "/img/product/hand-warmer/hand-warmer-01.png=two",
+  "/img/product/hand-warmer/hand-warmer-01.png=three",
+  "/img/product/hand-warmer/hand-warmer-01.png=four",
+];
+var others = [
+  "/img/product/other/eye-mask.png=one",
+  "/img/product/other/eye-mask.png=two",
+  "/img/product/other/eye-mask.png=three",
+  "/img/product/other/eye-mask.png=four",
+];
+function showPCProductList(val) {
   if (val == "Night Light") {
-    fillHtml(lamps);
+    fillPCHtml(lamps);
   } else if (val == "Projection Light") {
-    fillHtml(projectors);
+    fillPCHtml(projectors);
   } else if (val == "Aroma Diffuser") {
-    fillHtml(aromaDiffusers);
+    fillPCHtml(aromaDiffusers);
   } else if (val == "Hand Warmer") {
-    fillHtml(handWarmers);
+    fillPCHtml(handWarmers);
   } else if (val == "Other") {
-    fillHtml(others);
+    fillPCHtml(others);
   }
 }
 
-function fillHtml(arrs) {
+function fillPCHtml(arrs) {
   for (var i = 0; i < arrs.length; i++) {
     var obj = arrs[i];
     var imgUrl = obj.split("=")[0];
@@ -93,7 +92,7 @@ function fillHtml(arrs) {
   }
 }
 
-function fillCss(e) {
+function fillPCCss(e) {
   $(".navbar .nav-item .nav-link").css("background-color", "");
 
   $(".navbar .nav-item .nav-link").css("color", "#000");
@@ -132,8 +131,42 @@ function closeMenu() {
   $("#mobile-product-list").css("display", "none");
 }
 
-$(".mobile-category").on("click", function (e) {
-  console.log(e.target.text);
-  var categoryName = $(e.target).children().first();
-  console.log(categoryName);
+$(".mobile-category li").on("click", function (e) {
+  $(".mobile-show-product").empty();
+  var category = e.target.innerText;
+  $(".category-title").text(category);
+  $("#mobile-product-list").css("display", "block");
+  if (category == "Night Light") {
+    fillMobileHtml(lamps);
+  } else if (category == "Projection Light") {
+    fillMobileHtml(projectors);
+  } else if (category == "Aroma Diffuser") {
+    fillMobileHtml(aromaDiffusers);
+  } else if (category == "Hand Warmer") {
+    fillMobileHtml(handWarmers);
+  } else if (category == "Other") {
+    fillMobileHtml(others);
+  }
+});
+function fillMobileHtml(arrs) {
+  for (var i = 0; i < arrs.length; i++) {
+    var obj = arrs[i];
+    var imgUrl = obj.split("=")[0];
+    var productName = obj.split("=")[1];
+    var html =
+      '<div class="col-6">' +
+      '<img src="' +
+      imgUrl +
+      '" class="img-fluid mt-3" alt="" value="0"/>' +
+      "</div>" +
+      '<div class="col-6 d-flex flex-column justify-content-center"><a>' +
+      productName +
+      "</a>" +
+      "</div>";
+    $(".mobile-show-product").append(html);
+  }
+}
+//移动端回到上一级菜单
+$(".back-prev").on("click", function () {
+  $("#mobile-product-list").css("display", "none");
 });

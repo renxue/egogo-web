@@ -54,9 +54,12 @@ video {
 
 .footer ul {
   margin-top: 15px;
+  font-size: 0.8rem;
 }
 .copyrite {
   font-family: "poppins-medium";
+  font-size: 0.8rem;
+  text-transform: lowercase;
 }
 @media screen and (min-width: 996px) {
   #mobile {
@@ -109,14 +112,33 @@ video {
     justify-content: space-between;
   }
   #mobile-menu button {
-    margin-top: 10px;
+    margin-top: 7px;
     margin-right: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    /* z-index: 1; */
+    color: var(--text-color);
+    background-color: #71615b;
+    border: 1px solid var(--text-color);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    /* border-radius: 30px; */
+    font-weight: 600;
+    font-size: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
   }
   #mobile-menu img {
     margin-top: 5px;
     margin-left: 10px;
   }
   #mobile-product-window {
+    display: none;
     position: fixed;
     background-color: #fff;
     z-index: 6;

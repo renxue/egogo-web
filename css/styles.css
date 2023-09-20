@@ -80,6 +80,12 @@ video {
     top: 65px;
     z-index: 10;
   }
+  .video-background .pc {
+    display: block;
+  }
+  .video-background .mobile {
+    display: none;
+  }
 }
 @media screen and (max-width: 992px) {
   #pc {
@@ -160,5 +166,12 @@ video {
     background-color: #fff;
     z-index: 7;
     height: 100vh;
+  }
+
+  .video-background .pc {
+    display: none;
+  }
+  .video-background .mobile {
+    display: block;
   }
 }

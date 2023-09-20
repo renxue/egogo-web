@@ -1,0 +1,36 @@
+.specification {
+  gap: 30px;
+}
+.specification li p {
+  color: var(--text-color);
+  text-align: center;
+}
+.product-detail,
+.footer {
+  background-color: #000000;
+}
+h2,
+h3,
+h4,
+p,
+li {
+  color: #ffffff;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  margin-bottom: 30px;
+}
+.pack-list li {
+  margin-bottom: 20px;
+}
+.footer {
+  font-size: 0.8rem;
+  border-top: 1px solid #8d8d8d;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+.footer p {
+  margin-bottom: 0px;
+}

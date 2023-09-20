@@ -38,11 +38,13 @@
 //     }
 //   });
 // });
+
 // 当页面滚动时显示/隐藏回到顶部按钮
 $(function () {
-  $("#nav").load("header.html", function () {});
+  $("#nav").load("/header.html", function () {});
   $.getScript("/js/nav.js", function () {});
 });
+
 const scrollToTopBtn = document.querySelector(".scroll-to-top");
 const inquiryBtn = document.querySelector(".inquiry-btn");
 window.addEventListener("scroll", () => {

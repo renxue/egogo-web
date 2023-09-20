@@ -31,42 +31,30 @@ $(document).ready(function () {
   });
 });
 var lamps = [
-  "/img/product/lamp/panda/one.jpg=one",
-  "/img/product/lamp/panda/one.jpg=two",
-  "/img/product/lamp/panda/one.jpg=three",
-  "/img/product/lamp/panda/one.jpg=four",
+  "/img/product/lamp/panda/main.jpg=Panda Night Light",
+  "/img/product/lamp/duck/main.jpg=Duck Night Light",
+  "/img/product/lamp/rabbit/main.jpg=Rabbit Night Light",
+  "/img/product/lamp/sheep/main.jpg=Sheep Night Light",
 ];
 var projectors = [
-  "/img/product/projector/projector-01.png=one",
-  "/img/product/projector/projector-01.png=two",
-  "/img/product/projector/projector-01.png=three",
-  "/img/product/projector/projector-01.png=four",
+  "/img/product/projection/star/main.jpg=Star Projection Lamp",
+  "/img/product/projection/astrolabe/main.jpg=Astrolabe Projection Lamp",
+  "/img/product/projection/aurora/main.jpg=Aurora Projection Lamp",
+  "/img/product/projection/tripod/main.jpg=Trip Projection Lamp",
 ];
-var aromaDiffusers = [
-  "/img/product/aroma-diffuser/aroma-diffuser-01.png=one",
-  "/img/product/aroma-diffuser/aroma-diffuser-01.png=two",
-  "/img/product/aroma-diffuser/aroma-diffuser-01.png=three",
-  "/img/product/aroma-diffuser/aroma-diffuser-01.png=four",
-];
+var heaters = ["/img/product/heater/main.jpg=Mini Heater"];
 var handWarmers = [
-  "/img/product/hand-warmer/hand-warmer-01.png=one",
-  "/img/product/hand-warmer/hand-warmer-01.png=two",
-  "/img/product/hand-warmer/hand-warmer-01.png=three",
-  "/img/product/hand-warmer/hand-warmer-01.png=four",
+  "/img/product/hand-warmer/snowman/main.jpg=Snowman Hand Warmer",
+  "/img/product/hand-warmer/eggshell/main.jpg=Eggshell Hand Warmer",
 ];
-var others = [
-  "/img/product/other/eye-mask.png=one",
-  "/img/product/other/eye-mask.png=two",
-  "/img/product/other/eye-mask.png=three",
-  "/img/product/other/eye-mask.png=four",
-];
+var others = ["/img/product/other/eye-mask.png=Graphene heating eye mask"];
 function showPCProductList(val) {
   if (val == "Night Light") {
     fillPCHtml(lamps);
   } else if (val == "Projection Light") {
     fillPCHtml(projectors);
-  } else if (val == "Aroma Diffuser") {
-    fillPCHtml(aromaDiffusers);
+  } else if (val == "Heater") {
+    fillPCHtml(heaters);
   } else if (val == "Hand Warmer") {
     fillPCHtml(handWarmers);
   } else if (val == "Other") {
@@ -105,10 +93,13 @@ function fillPCCss(e) {
   });
   $(".main").css("filter", "blur(10px)");
 }
+
+//不需要设置导航栏字体颜色默认为白色的页面
+filterPagesNavFontColor = ["/about.html", "/projection/product-detail.html"];
 function clearNavProduct() {
   var path = window.location.pathname;
   $(".product-window").css("display", "none");
-  if (path != "/about.html") {
+  if (!isStringInArray(path)) {
     $("nav").css("background-color", "");
     $(".navbar-brand img").attr("src", "/img/logo.png");
     $(".navbar .nav-item .nav-link").css("color", "#fff");
@@ -120,6 +111,15 @@ function clearNavProduct() {
     "border-radius": "",
   });
   $(".main").css("filter", "");
+}
+//判断数组中是否存在某个字符串
+function isStringInArray(page) {
+  for (var i = 0; i < filterPagesNavFontColor.length; i++) {
+    if (page === filterPagesNavFontColor[i]) {
+      return true;
+    }
+  }
+  return false;
 }
 // 打开手机导航菜单
 function openMenu() {
@@ -140,8 +140,8 @@ $(".mobile-category li").on("click", function (e) {
     fillMobileHtml(lamps);
   } else if (category == "Projection Light") {
     fillMobileHtml(projectors);
-  } else if (category == "Aroma Diffuser") {
-    fillMobileHtml(aromaDiffusers);
+  } else if (category == "Heater") {
+    fillMobileHtml(heaters);
   } else if (category == "Hand Warmer") {
     fillMobileHtml(handWarmers);
   } else if (category == "Other") {

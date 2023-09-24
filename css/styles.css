@@ -23,6 +23,7 @@
   font-size: 1.2rem;
   color: var(--text-color);
   cursor: pointer;
+  font-weight: 600;
 }
 .navbar button,
 .btn-light:hover,
@@ -33,6 +34,13 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: white;
+}
+.nav-a {
+  color: #000000;
+}
+.nav-a:hover {
+  text-decoration: underline;
+  color: #000000;
 }
 #about,
 #contact {
@@ -109,9 +117,15 @@ video {
   .navbar {
     display: none;
   }
+  .category-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000;
+  }
   #mobile-menu {
     background-color: transparent;
     position: fixed;
+    top: 0px;
     z-index: 1;
     width: 100%;
     display: flex;
@@ -146,6 +160,7 @@ video {
   #mobile-product-window {
     display: none;
     position: fixed;
+    top: 0px;
     background-color: #fff;
     z-index: 6;
     height: 100vh;
@@ -162,6 +177,7 @@ video {
   }
   #mobile-product-list {
     position: fixed;
+    top: 0px;
     display: none;
     background-color: #fff;
     z-index: 7;

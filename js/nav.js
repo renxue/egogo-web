@@ -12,7 +12,31 @@ $(document).ready(function () {
       $(".navbar-brand img").attr("src", "/img/logo.png");
     }
   });
+  // 使用JavaScript禁用滚动事件
+  function disableScroll() {
+    // 获取当前滚动位置
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
+    // 使用CSS样式禁用滚动
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    // 将滚动位置还原，以防止页面跳动
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    };
+  }
+
+  // 启用滚动事件
+  function enableScroll() {
+    // 恢复滚动
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+
+    // 移除滚动位置还原
+    window.onscroll = null;
+  }
   $(".navbar .nav-item .nav-link").mouseenter(function (e) {
     // 鼠标进入事件
     $("#nav-product").empty();
@@ -23,31 +47,37 @@ $(document).ready(function () {
       showPCProductList(val);
       fillPCCss(e);
     }
+    disableScroll();
   });
 
   $("#nav").mouseleave(function (e) {
     // 鼠标离开事件
     clearNavProduct();
+    enableScroll();
   });
 });
 var lamps = [
-  "/img/product/lamp/panda/main.jpg=Panda Night Light",
-  "/img/product/lamp/duck/main.jpg=Duck Night Light",
-  "/img/product/lamp/rabbit/main.jpg=Rabbit Night Light",
-  "/img/product/lamp/sheep/main.jpg=Sheep Night Light",
+  "/img/product/lamp/panda/main.jpg=Panda Night Light=/product/lamp/panda",
+  "/img/product/lamp/duck/main.jpg=Duck Night Light=/product/lamp/duck",
+  "/img/product/lamp/rabbit/main.jpg=Rabbit Night Light=/product/lamp/rabbit",
+  "/img/product/lamp/sheep/main.jpg=Sheep Night Light=/product/lamp/sheep",
 ];
 var projectors = [
-  "/img/product/projection/star/main.jpg=Star Projection Lamp",
-  "/img/product/projection/astrolabe/main.jpg=Astrolabe Projection Lamp",
-  "/img/product/projection/aurora/main.jpg=Aurora Projection Lamp",
-  "/img/product/projection/tripod/main.jpg=Trip Projection Lamp",
+  "/img/product/projection/star/main.jpg=Star Projection Lamp=/product/projection/star",
+  "/img/product/projection/astrolabe/main.jpg=Astrolabe Projection Lamp=/product/projection/astrolabe",
+  "/img/product/projection/aurora/main.jpg=Aurora Projection Lamp=/product/projection/aurora",
+  "/img/product/projection/planet/main.jpg=Planet Projection Lamp=/product/projection/planet",
 ];
-var heaters = ["/img/product/heater/main.jpg=Mini Heater"];
+var heaters = [
+  "/img/product/heater/main.jpg=Mini Heater=/product/heater/heater",
+];
 var handWarmers = [
-  "/img/product/hand-warmer/snowman/main.jpg=Snowman Hand Warmer",
-  "/img/product/hand-warmer/eggshell/main.jpg=Eggshell Hand Warmer",
+  "/img/product/hand-warmer/snowman/main.jpg=Snowman Hand Warmer=/product/hand-warmer/snowman",
+  // "/img/product/hand-warmer/eggshell/main.jpg=Eggshell Hand Warmer=/product/hand-warmer/eggshell",
 ];
-var others = ["/img/product/other/eye-mask.png=Graphene heating eye mask"];
+var others = [
+  "/img/product/other/eye-mask.png=Graphene heating eye mask=/product/eye-mask",
+];
 function showPCProductList(val) {
   if (val == "Night Light") {
     fillPCHtml(lamps);
@@ -67,12 +97,15 @@ function fillPCHtml(arrs) {
     var obj = arrs[i];
     var imgUrl = obj.split("=")[0];
     var productName = obj.split("=")[1];
+    var productUrl = obj.split("=")[2];
     var html =
       '<div class="col-lg-3 col-md-4 col-sm-12 d-flex flex-column align-items-center p-5">' +
       '<img src="' +
       imgUrl +
       '" class="img-fluid" alt="" />' +
-      '<a class="mt-3">' +
+      '<a class="mt-3 nav-a" href="' +
+      productUrl +
+      '">' +
       productName +
       "</a>" +
       "</div>";
@@ -82,24 +115,27 @@ function fillPCHtml(arrs) {
 
 function fillPCCss(e) {
   $(".navbar .nav-item .nav-link").css("background-color", "");
-
   $(".navbar .nav-item .nav-link").css("color", "#000");
   $(".product-window").css("display", "block");
   $("nav").css("background-color", "#fff");
   $(".navbar-brand img").attr("src", "/img/logo-black.png");
+  console.log(e.toElement);
   $(e.toElement).css({
-    "background-color": "#edb64a",
+    "background-color": "#d9d9d9",
     "border-radius": "3%",
   });
-  $(".main").css("filter", "blur(10px)");
+
+  $(".main").css({ filter: "blur(10px)", "background-color": "#b4b4b4" });
+  $(".exhibition, .our-service").css({ "background-color": "#b4b4b4" });
+  $(".banner").css("filter", "blur(10px)");
+  $(".product-detail").css("filter", "blur(10px)");
 }
 
 //不需要设置导航栏字体颜色默认为白色的页面
-filterPagesNavFontColor = ["/about.html", "/projection/product-detail.html"];
 function clearNavProduct() {
   var path = window.location.pathname;
   $(".product-window").css("display", "none");
-  if (!isStringInArray(path)) {
+  if (!path.includes("/about")) {
     $("nav").css("background-color", "");
     $(".navbar-brand img").attr("src", "/img/logo.png");
     $(".navbar .nav-item .nav-link").css("color", "#fff");
@@ -110,23 +146,19 @@ function clearNavProduct() {
     "background-color": "",
     "border-radius": "",
   });
-  $(".main").css("filter", "");
-}
-//判断数组中是否存在某个字符串
-function isStringInArray(page) {
-  for (var i = 0; i < filterPagesNavFontColor.length; i++) {
-    if (page === filterPagesNavFontColor[i]) {
-      return true;
-    }
-  }
-  return false;
+  $(".main").css({ filter: "", "background-color": "" });
+  $(".exhibition, .our-service").css({ "background-color": "" });
+  $(".banner").css("filter", "");
+  $(".product-detail").css("filter", "");
 }
 // 打开手机导航菜单
 function openMenu() {
   $("#mobile-product-window").css("display", "block");
+  $("#mobile-menu").css("display", "none");
 }
 // 关闭手机导航菜单
 function closeMenu() {
+  $("#mobile-menu").css("display", "flex");
   $("#mobile-product-window").css("display", "none");
   $("#mobile-product-list").css("display", "none");
 }
@@ -153,13 +185,16 @@ function fillMobileHtml(arrs) {
     var obj = arrs[i];
     var imgUrl = obj.split("=")[0];
     var productName = obj.split("=")[1];
+    var productUrl = obj.split("=")[2];
     var html =
       '<div class="col-6">' +
       '<img src="' +
       imgUrl +
-      '" class="img-fluid mt-3" alt="" value="0"/>' +
+      '" class="img-fluid mt-1" alt="" value="0"/>' +
       "</div>" +
-      '<div class="col-6 d-flex flex-column justify-content-center"><a>' +
+      '<div class="col-6 d-flex flex-column justify-content-center"><a class="nav-a" href="' +
+      productUrl +
+      '">' +
       productName +
       "</a>" +
       "</div>";

@@ -3,59 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fade Out on Hover</title>
+    <title>内容淡出效果</title>
     <style>
-      .container {
-        position: relative;
-        width: 300px;
-        height: 200px;
-      }
-
-      .main-content,
-      .hidden-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: opacity 0.5s;
-      }
-
-      .hidden-content {
+      /* 初始状态：隐藏 */
+      .content {
         opacity: 0;
-        display: none;
+        transform: translateY(20px); /* 初始位置 */
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="main-content">
-        <h1>这是主要内容</h1>
-      </div>
-      <div class="hidden-content">
-        <h2>这是隐藏内容</h2>
-      </div>
+    <div class="content">
+      <h1>内容标题</h1>
+      <p>这是一些内容...</p>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+      // 获取要动画的元素
+      const content = document.querySelector(".content");
+
+      // 创建淡出动画
+      gsap.to(content, {
+        opacity: 1, // 淡入
+        y: 0, // 移回原位置
+        duration: 1, // 动画持续时间
+        scrollTrigger: {
+          trigger: content, // 触发滚动的元素
+          start: "top 80%", // 触发点：元素顶部距离视窗底部80%
+          end: "top 20%", // 结束点：元素顶部距离视窗底部20%
+          scrub: true, // 开启“刷子”效果，使动画与滚动同步
+        },
+      });
+    </script>
   </body>
-  <script>
-    const container = document.querySelector(".container");
-    const mainContent = document.querySelector(".main-content");
-    const hiddenContent = document.querySelector(".hidden-content");
-
-    container.addEventListener("mouseenter", () => {
-      hiddenContent.style.display = "block";
-      setTimeout(() => {
-        hiddenContent.style.opacity = "1";
-        mainContent.style.opacity = "0";
-      }, 10);
-    });
-
-    container.addEventListener("mouseleave", () => {
-      hiddenContent.style.opacity = "0";
-      mainContent.style.opacity = "1";
-      setTimeout(() => {
-        hiddenContent.style.display = "none";
-      }, 500);
-    });
-  </script>
 </html>

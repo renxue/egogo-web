@@ -86,8 +86,8 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <img
-              src="/img/product/projection/planet/scene-1.jpg"
-              class="img-fluid"
+              data-src="/img/product/projection/planet/scene-1.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -96,8 +96,8 @@
         <div class="row mt-5">
           <div class="col-lg-7 col-md-12">
             <img
-              src="/img/product/projection/planet/scene-2.jpg"
-              class="img-fluid"
+              data="/img/product/projection/planet/scene-2.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -131,29 +131,29 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/planet/application-3.jpg"
-            class="img-fluid mt-3"
+            data-src="/img/product/projection/planet/application-3.jpg"
+            class="img-fluid lazy mt-3"
             alt="projection night light"
           />
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/planet/application-4.jpg"
-            class="img-fluid mt-3"
+            data-src="/img/product/projection/planet/application-4.jpg"
+            class="img-fluid lazy mt-3"
             alt="projection night light"
           />
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/planet/application-1.jpg"
-            class="img-fluid mt-3"
+            data-src="/img/product/projection/planet/application-1.jpg"
+            class="img-fluid lazy mt-3"
             alt="projection night light"
           />
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/planet/application-2.jpg"
-            class="img-fluid mt-3"
+            data-src="/img/product/projection/planet/application-2.jpg"
+            class="img-fluid lazy mt-3"
             alt="projection night light"
           />
         </div>
@@ -164,25 +164,25 @@
         </div>
         <div class="col-lg-4 col-md-12">
           <img
-            src="/img/product/projection/planet/live-experience-1.jpg"
+            data-src="/img/product/projection/planet/live-experience-1.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-4 col-md-12">
           <img
-            src="/img/product/projection/planet/live-experience-2.jpg"
+            data-src="/img/product/projection/planet/live-experience-2.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-4 col-md-12">
           <img
-            src="/img/product/projection/planet/live-experience-3.jpg"
+            data-src="/img/product/projection/planet/live-experience-3.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
@@ -212,8 +212,8 @@
             </div>
             <div class="col-md-6 col-sm-12">
               <img
-                src="/img/product/projection/planet/product-list.jpg"
-                class="img-fluid"
+                data-src="/img/product/projection/planet/product-list.jpg"
+                class="img-fluid lazy"
                 alt="Responsive image"
               />
             </div>
@@ -377,19 +377,27 @@
         >Inquiry</a
       >
     </div>
+
+    <!-- 发送消息动画 -->
+    <img
+      class="success-message"
+      data-src="/img/email.png"
+      width="100"
+      alt="飞过的图片"
+      id="message-ok"
+    />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- 图标 -->
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/lazyload.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        // Your custom settings go here
+      });
+      lazyLoadInstance.update();
+    </script>
   </body>
-  <!-- 发送消息动画 -->
-  <img
-    class="success-message"
-    src="/img/email.png"
-    width="100"
-    alt="飞过的图片"
-    id="message-ok"
-  />
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap.js"></script>
-  <script src="/js/script.js"></script>
-  <!-- 图标 -->
-  <script src="/js/fontawesome.js"></script>
-  <script src="/js/product.js"></script>
 </html>

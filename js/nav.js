@@ -100,9 +100,11 @@ function fillPCHtml(arrs) {
     var productUrl = obj.split("=")[2];
     var html =
       '<div class="col-lg-3 col-md-4 col-sm-12 d-flex flex-column align-items-center p-5">' +
-      '<img src="' +
+      '<a href = "' +
+      productUrl +
+      '"><img src="' +
       imgUrl +
-      '" class="img-fluid" alt="" />' +
+      '" class="img-fluid" alt="" /></a>' +
       '<a class="mt-3 nav-a" href="' +
       productUrl +
       '">' +

@@ -104,8 +104,8 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <img
-              src="/img/product/hand-warmer/snowman/scene-1.jpg"
-              class="img-fluid"
+              data-src="/img/product/hand-warmer/snowman/scene-1.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -117,25 +117,25 @@
         </div>
         <div class="col-lg-6 col-md-12">
           <img
-            src="/img/product/hand-warmer/snowman/function-1.jpg"
-            class="img-fluid"
+            data-src="/img/product/hand-warmer/snowman/function-1.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
           <img
-            src="/img/product/hand-warmer/snowman/function-desc-1.jpg"
-            class="img-fluid"
+            data-src="/img/product/hand-warmer/snowman/function-desc-1.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-6 col-md-12">
           <img
-            src="/img/product/hand-warmer/snowman/function-2.jpg"
-            class="img-fluid"
+            data-src="/img/product/hand-warmer/snowman/function-2.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
           <img
-            src="/img/product/hand-warmer/snowman/function-desc-2.jpg"
-            class="img-fluid"
+            data-src="/img/product/hand-warmer/snowman/function-desc-2.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
@@ -144,25 +144,25 @@
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <img
-              src="/img/product/hand-warmer/snowman/details-1.jpg"
-              class="img-fluid mt-5"
+              data-src="/img/product/hand-warmer/snowman/details-1.jpg"
+              class="img-fluid lazy mt-5"
               alt="Responsive image"
             />
           </div>
           <div class="col-md-6 col-sm-12">
             <img
-              src="/img/product/hand-warmer/snowman/details-2.jpg"
-              class="img-fluid mt-5"
+              data-src="/img/product/hand-warmer/snowman/details-2.jpg"
+              class="img-fluid lazy mt-5"
               alt="Responsive image"
             />
             <img
-              src="/img/product/hand-warmer/snowman/details-3.jpg"
-              class="img-fluid"
+              data-src="/img/product/hand-warmer/snowman/details-3.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
             <img
-              src="/img/product/hand-warmer/snowman/details-4.jpg"
-              class="img-fluid"
+              data-src="/img/product/hand-warmer/snowman/details-4.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -174,33 +174,33 @@
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/hand-warmer/snowman/application-4.jpg"
+            data-src="/img/product/hand-warmer/snowman/application-4.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/hand-warmer/snowman/application-2.jpg"
+            data-src="/img/product/hand-warmer/snowman/application-2.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/hand-warmer/snowman/application-3.jpg"
+            data-src="/img/product/hand-warmer/snowman/application-3.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/hand-warmer/snowman/application-1.jpg"
+            data-src="/img/product/hand-warmer/snowman/application-1.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
@@ -229,8 +229,8 @@
             </div>
             <div class="col-md-6 col-sm-12">
               <img
-                src="/img/product/hand-warmer/snowman/product-list.jpg"
-                class="img-fluid"
+                data-src="/img/product/hand-warmer/snowman/product-list.jpg"
+                class="img-fluid lazy"
                 alt="Responsive image"
               />
             </div>
@@ -394,19 +394,27 @@
         >Inquiry</a
       >
     </div>
+
+    <!-- 发送消息动画 -->
+    <img
+      class="success-message"
+      src="/img/email.png"
+      width="100"
+      alt="飞过的图片"
+      id="message-ok"
+    />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- 图标 -->
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/lazyload.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        // Your custom settings go here
+      });
+      lazyLoadInstance.update();
+    </script>
   </body>
-  <!-- 发送消息动画 -->
-  <img
-    class="success-message"
-    src="/img/email.png"
-    width="100"
-    alt="飞过的图片"
-    id="message-ok"
-  />
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap.js"></script>
-  <script src="/js/script.js"></script>
-  <!-- 图标 -->
-  <script src="/js/fontawesome.js"></script>
-  <script src="/js/product.js"></script>
 </html>

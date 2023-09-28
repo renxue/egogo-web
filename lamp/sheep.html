@@ -78,8 +78,8 @@
             class="col-lg-5 col-md-12 d-flex flex-column align-items-center justify-content-center"
           >
             <img
-              src="/img/product/lamp/sheep/one.jpg"
-              class="img-fluid"
+              data-src="/img/product/lamp/sheep/one.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -93,24 +93,24 @@
               <div class="row">
                 <div class="col-md-4 col-sm-12">
                   <img
-                    src="/img/product/lamp/sheep/two.png"
-                    class="img-fluid"
+                    data-src="/img/product/lamp/sheep/two.png"
+                    class="img-fluid lazy"
                     alt="Responsive image"
                   />
                   <p class="text-center">First mode 30% low bright</p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                   <img
-                    src="/img/product/lamp/sheep/three.png"
-                    class="img-fluid"
+                    data-src="/img/product/lamp/sheep/three.png"
+                    class="img-fluid lazy"
                     alt="Responsive image"
                   />
                   <p class="text-center">Second mode 60% in the bright</p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                   <img
-                    src="/img/product/lamp/sheep/four.png"
-                    class="img-fluid"
+                    data-src="/img/product/lamp/sheep/four.png"
+                    class="img-fluid lazy"
                     alt="Responsive image"
                   />
                   <p class="text-center">Three mode 100% high light</p>
@@ -131,24 +131,24 @@
               <div class="row">
                 <div class="col-md-4 col-sm-12">
                   <img
-                    src="/img/product/lamp/sheep/five-one.png"
-                    class="img-fluid"
+                    data-src="/img/product/lamp/sheep/five-one.png"
+                    class="img-fluid lazy"
                     alt="Responsive image"
                   />
                   <p class="text-center">Silicone soft feet</p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                   <img
-                    src="/img/product/lamp/sheep/five-two.png"
-                    class="img-fluid"
+                    data-src="/img/product/lamp/sheep/five-two.png"
+                    class="img-fluid lazy"
                     alt="Responsive image"
                   />
                   <p class="text-center">Squeeze to release pressure</p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                   <img
-                    src="/img/product/lamp/sheep/five-three.png"
-                    class="img-fluid"
+                    data-src="/img/product/lamp/sheep/five-three.png"
+                    class="img-fluid lazy"
                     alt="Responsive image"
                   />
                   <p class="text-center">Hammer away all worries</p>
@@ -158,8 +158,8 @@
           </div>
           <div class="col-lg-6 col-md-12 d-flex justify-content-center">
             <img
-              src="/img/product/lamp/sheep/five.png"
-              class="img-fluid"
+              data-src="/img/product/lamp/sheep/five.png"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -174,22 +174,22 @@
         </div>
         <div class="col-md-4 col-sm-12">
           <img
-            src="/img/product/lamp/sheep/seven.jpg"
-            class="img-fluid"
+            data-src="/img/product/lamp/sheep/seven.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
         <div class="col-md-4 col-sm-12">
           <img
-            src="/img/product/lamp/sheep/eight.jpg"
-            class="img-fluid"
+            data-src="/img/product/lamp/sheep/eight.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
         <div class="col-md-4 col-sm-12">
           <img
-            src="/img/product/lamp/sheep/nine.jpg"
-            class="img-fluid"
+            data-src="/img/product/lamp/sheep/nine.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
@@ -218,8 +218,8 @@
             </div>
             <div class="col-md-6 col-sm-12">
               <img
-                src="/img/product/lamp/sheep/nine.jpg"
-                class="img-fluid"
+                data-src="/img/product/lamp/sheep/nine.jpg"
+                class="img-fluid lazy"
                 alt="Responsive image"
               />
             </div>
@@ -383,20 +383,28 @@
         >Inquiry</a
       >
     </div>
+
+    <!-- 发送消息动画 -->
+    <img
+      class="success-message"
+      data-src="/img/email.png"
+      width="100"
+      alt="飞过的图片"
+      id="message-ok"
+    />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- 图标 -->
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/lazyload.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        // Your custom settings go here
+      });
+      lazyLoadInstance.update();
+    </script>
   </body>
-  <!-- 发送消息动画 -->
-  <img
-    class="success-message"
-    src="/img/email.png"
-    width="100"
-    alt="飞过的图片"
-    id="message-ok"
-  />
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap.js"></script>
-  <script src="/js/script.js"></script>
-  <!-- 图标 -->
-  <script src="/js/fontawesome.js"></script>
-  <script src="/js/product.js"></script>
-  <script src="/js/nav.js"></script>
 </html>

@@ -86,8 +86,8 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <img
-              src="/img/product/projection/astrolabe/scene-1.jpg"
-              class="img-fluid"
+              data-src="/img/product/projection/astrolabe/scene-1.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -96,8 +96,8 @@
         <div class="row mt-5">
           <div class="col-lg-7 col-md-12">
             <img
-              src="/img/product/projection/astrolabe/scene-2.jpg"
-              class="img-fluid"
+              data-src="/img/product/projection/astrolabe/scene-2.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -131,29 +131,29 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/astrolabe/application-1.jpg"
-            class="img-fluid"
+            data-src="/img/product/projection/astrolabe/application-1.jpg"
+            class="img-fluid lazy"
             alt="projection night light"
           />
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/astrolabe/application-2.jpg"
-            class="img-fluid"
+            data-src="/img/product/projection/astrolabe/application-2.jpg"
+            class="img-fluid lazy"
             alt="projection night light"
           />
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/astrolabe/application-3.jpg"
-            class="img-fluid"
+            data-src="/img/product/projection/astrolabe/application-3.jpg"
+            class="img-fluid lazy"
             alt="projection night light"
           />
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
           <img
-            src="/img/product/projection/astrolabe/application-4.jpg"
-            class="img-fluid"
+            data-src="/img/product/projection/astrolabe/application-4.jpg"
+            class="img-fluid lazy"
             alt="projection night light"
           />
         </div>
@@ -164,39 +164,39 @@
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/projection/astrolabe/remote.png"
+            data-src="/img/product/projection/astrolabe/remote.png"
             width="500px"
-            class="img-fluid"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
           <img
-            src="/img/product/projection/astrolabe/lighting-modes-4.jpg"
+            data-src="/img/product/projection/astrolabe/lighting-modes-4.jpg"
             width="500px"
-            class="img-fluid mt-4"
-            alt="Responsive image"
-          />
-        </div>
-        <div class="col-lg-3 col-md-12">
-          <img
-            src="/img/product/projection/astrolabe/lighting-modes-1.jpg"
-            width="500px"
-            class="img-fluid"
+            class="img-fluid lazy mt-4"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/projection/astrolabe/lighting-modes-2.jpg"
+            data-src="/img/product/projection/astrolabe/lighting-modes-1.jpg"
             width="500px"
-            class="img-fluid"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/projection/astrolabe/lighting-modes-3.jpg"
+            data-src="/img/product/projection/astrolabe/lighting-modes-2.jpg"
             width="500px"
-            class="img-fluid"
+            class="img-fluid lazy"
+            alt="Responsive image"
+          />
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <img
+            data-src="/img/product/projection/astrolabe/lighting-modes-3.jpg"
+            width="500px"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
@@ -226,8 +226,8 @@
             </div>
             <div class="col-md-6 col-sm-12">
               <img
-                src="/img/product/projection/astrolabe/product-list.jpg"
-                class="img-fluid"
+                data-src="/img/product/projection/astrolabe/product-list.jpg"
+                class="img-fluid lazy"
                 alt="Responsive image"
               />
             </div>
@@ -240,8 +240,8 @@
             <iframe
               width="916"
               height="515"
-              src="https://www.youtube.com/embed/V7udpj98V78"
-              title="Panda Night Light Silicone Night Lamp Official HD Video"
+              src="https://www.youtube.com/embed/9Pt2wZuEpMs"
+              title="Spaceship Projector Lamp"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
@@ -391,19 +391,27 @@
         >Inquiry</a
       >
     </div>
+
+    <!-- 发送消息动画 -->
+    <img
+      class="success-message"
+      src="/img/email.png"
+      width="100"
+      alt="飞过的图片"
+      id="message-ok"
+    />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- 图标 -->
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/lazyload.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        // Your custom settings go here
+      });
+      lazyLoadInstance.update();
+    </script>
   </body>
-  <!-- 发送消息动画 -->
-  <img
-    class="success-message"
-    src="/img/email.png"
-    width="100"
-    alt="飞过的图片"
-    id="message-ok"
-  />
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap.js"></script>
-  <script src="/js/script.js"></script>
-  <!-- 图标 -->
-  <script src="/js/fontawesome.js"></script>
-  <script src="/js/product.js"></script>
 </html>

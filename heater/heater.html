@@ -25,7 +25,7 @@
       <div
         class="d-flex flex-column align-items-center justify-content-around content"
       >
-        <h1>Planet Projection Lamp</h1>
+        <h1>Portable Desktop Heater</h1>
         <div
           class="d-flex flex-column align-items-center justify-content-center"
         >
@@ -78,15 +78,15 @@
               even more special.
             </p>
             <img
-              src="/img/product/heater/specification-1.jpg"
-              class="img-fluid"
+              data-src="/img/product/heater/specification-1.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
           <div class="col-lg-6 col-md-12">
             <img
-              src="/img/product/heater/scene-1.jpg"
-              class="img-fluid"
+              data-src="/img/product/heater/scene-1.jpg"
+              class="img-fluid lazy"
               alt="Responsive image"
             />
           </div>
@@ -98,8 +98,8 @@
         </div>
         <div class="col-md-12 col-sm-12">
           <img
-            src="/img/product/heater/product-structure.jpg"
-            class="img-fluid"
+            data-src="/img/product/heater/product-structure.jpg"
+            class="img-fluid lazy"
             alt="Responsive image"
           />
         </div>
@@ -108,29 +108,29 @@
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <img
-              src="/img/product/heater/detail-1.jpg"
-              class="img-fluid mt-5"
+              data-src="/img/product/heater/detail-1.jpg"
+              class="img-fluid lazy mt-5"
               alt="Responsive image"
             />
           </div>
           <div class="col-md-6 col-sm-12">
             <img
-              src="/img/product/heater/detail-2.jpg"
-              class="img-fluid mt-5"
+              data-src="/img/product/heater/detail-2.jpg"
+              class="img-fluid lazy mt-5"
               alt="Responsive image"
             />
           </div>
           <div class="col-md-6 col-sm-12">
             <img
-              src="/img/product/heater/detail-3.jpg"
-              class="img-fluid mt-5"
+              data-src="/img/product/heater/detail-3.jpg"
+              class="img-fluid lazy mt-5"
               alt="Responsive image"
             />
           </div>
           <div class="col-md-6 col-sm-12">
             <img
-              src="/img/product/heater/detail-4.jpg"
-              class="img-fluid mt-5"
+              data-src="/img/product/heater/detail-4.jpg"
+              class="img-fluid lazy mt-5"
               alt="Responsive image"
             />
           </div>
@@ -142,8 +142,8 @@
             Convection air duct, quiet and as gentle as natural wind
           </p>
           <img
-            src="/img/product/heater/product-detail-1.jpg"
-            class="img-fluid"
+            data-src="/img/product/heater/product-detail-1.jpg"
+            class="img-fluid lazy"
             alt="projection night light"
           />
         </div>
@@ -152,8 +152,8 @@
             PTC ceramic heating element reaches temperature in 3 seconds.
           </p>
           <img
-            src="/img/product/heater/product-detail-2.jpg"
-            class="img-fluid"
+            data-src="/img/product/heater/product-detail-2.jpg"
+            class="img-fluid lazy"
             alt="projection night light"
           />
         </div>
@@ -164,33 +164,33 @@
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/heater/application-1.jpg"
+            data-src="/img/product/heater/application-1.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/heater/application-2.jpg"
+            data-src="/img/product/heater/application-2.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/heater/application-3.jpg"
+            data-src="/img/product/heater/application-3.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
         <div class="col-lg-3 col-md-12">
           <img
-            src="/img/product/heater/application-4.jpg"
+            data-src="/img/product/heater/application-4.jpg"
             width="500px"
-            class="img-fluid mt-3"
+            class="img-fluid lazy mt-3"
             alt="Responsive image"
           />
         </div>
@@ -348,19 +348,27 @@
         >Inquiry</a
       >
     </div>
+
+    <!-- 发送消息动画 -->
+    <img
+      class="success-message"
+      data-src="/img/email.png"
+      width="100"
+      alt="飞过的图片"
+      id="message-ok"
+    />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- 图标 -->
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/lazyload.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        // Your custom settings go here
+      });
+      lazyLoadInstance.update();
+    </script>
   </body>
-  <!-- 发送消息动画 -->
-  <img
-    class="success-message"
-    src="/img/email.png"
-    width="100"
-    alt="飞过的图片"
-    id="message-ok"
-  />
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap.js"></script>
-  <script src="/js/script.js"></script>
-  <!-- 图标 -->
-  <script src="/js/fontawesome.js"></script>
-  <script src="/js/product.js"></script>
 </html>
